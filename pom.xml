@@ -328,19 +328,6 @@
 
   <profiles>
     <profile>
-      <!-- workaround for concurrent access to local repository on Windows -->
-      <!-- https://issues.apache.org/jira/browse/MRESOLVER-372 -->
-      <id>windows</id>
-      <activation>
-        <os>
-          <family>windows</family>
-        </os>
-      </activation>
-      <properties>
-        <invoker.parallelThreads>1</invoker.parallelThreads>
-      </properties>
-    </profile>
-    <profile>
       <id>java11+</id>
       <activation>
         <jdk>[11,)</jdk>
